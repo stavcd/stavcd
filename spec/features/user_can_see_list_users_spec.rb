@@ -1,4 +1,4 @@
-require_relative 'features_helper'
+require_relative 'feature_helper'
 
 feature 'User can see list users' do
 
