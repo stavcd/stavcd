@@ -1,5 +1,3 @@
-
-
 test:
   database: stavcd_test
   adapter: postgresql
