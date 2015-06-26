@@ -28,6 +28,8 @@ gem 'devise'
 gem 'slim-rails'
 
 gem 'bootstrap-sass'
+
+gem 'paranoia'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
