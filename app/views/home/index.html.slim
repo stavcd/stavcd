@@ -4,7 +4,7 @@
       ul
         li #{ user.email }
         -if user != current_user
-          =link_to 'написать сообщение', user_messages_path(user)
+          =link_to 'написать сообщение', user_messages_path(user), popup: true
           br
       -if  user == current_user
         =link_to 'Удалить свою анкету', user_path(user), method: :delete

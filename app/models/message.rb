@@ -6,6 +6,6 @@ class Message < ActiveRecord::Base
   validates :body, :sender_id, :recipient_id, presence: true
 
   scope :between, -> (sender_id, recipient_id) do
-    where('(sender_id = ? AND recipient_id = ?) OR (sender_id = ? AND recipient_id = ?)', sender_id, recipient_id, recipient_id, sender_id)
+    where(sender_id: [sender_id, recipient_id], recipient_id: [sender_id, recipient_id])
   end
 end

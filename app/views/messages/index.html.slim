@@ -1,7 +1,7 @@
 .row.messages
   .col-md-3
     - @messages.each do |message|
-      -if message.sender_id == current_user.id
+      -if message.sender == current_user
         .outing-messages
           p пользователь #{current_user.email} написал
           = message.body

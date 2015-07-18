@@ -1,5 +1,5 @@
 .row
   .message
-    = form_for [@user, @message], method: :post, class: 'form-horizontal' do |f|
+    = form_for [@user, @message], class: 'form-horizontal' do |f|
       =f.text_area :body, class: 'form-control body'
       =f.submit 'Send message', class: 'btn btn-submit'
