@@ -1,5 +1,11 @@
 .row
-  .col-md-2
+  .col-md-5
     -@users.each do |user|
       ul
         li #{ user.email }
+        -if user != current_user
+          =link_to 'написать сообщение', user_messages_path(user), popup: true
+          br
+      -if  user == current_user
+        =link_to 'Удалить свою анкету', user_path(user), method: :delete
+      hr

@@ -1,0 +1,13 @@
+.row.messages
+  .col-md-3
+    - @messages.each do |message|
+      -if message.sender == current_user
+        .outing-messages
+          p пользователь #{current_user.email} написал
+          = message.body
+      -else
+        .incoming-messages
+          p пользователь #{message.sender.email} написал
+          = message.body
+
+= render 'message'
